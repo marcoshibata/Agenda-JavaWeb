@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="editar">
 	<h1>Editar novo contato</h1>
 	<form name="frmContato" action="update">
 		<table>
@@ -30,5 +31,6 @@
 		<input type="button" value="Salvar" class="Botao1" onclick="validar()">
 	</form>
 	<script src="scripts/validador.js"></script>
+	</div>
 </body>
 </html>

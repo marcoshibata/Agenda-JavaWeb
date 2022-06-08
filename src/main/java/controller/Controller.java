@@ -15,7 +15,7 @@ import com.mysql.cj.protocol.x.SyncFlushDeflaterOutputStream;
 import model.DAO;
 import model.JavaBeans;
 
-@WebServlet(urlPatterns = {"/Controller","/main","/insert","/select","/update"})
+@WebServlet(urlPatterns = {"/Controller","/main","/insert","/select","/update","/delete"})
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     DAO dao = new DAO();  
@@ -36,6 +36,8 @@ public class Controller extends HttpServlet {
 			listarContato(request, response);
 		}else if(action.equals("/update")) {
 			editarContato(request, response);
+		}else if(action.equals("/delete")) {
+			removerContato(request, response);
 		}else {
 		response.sendRedirect("index.html");
 	}
@@ -90,6 +92,19 @@ public class Controller extends HttpServlet {
 			contato.setEmail(request.getParameter("email"));
 			//executar o metodo alterar contato
 			dao.alterarContato(contato);
+			//redirecionar para documento agenda.jsp (atualizando as alyteracoes)
+			response.sendRedirect("main");
+			
+		}
+		
+		//Remover Contato
+		protected void removerContato(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+			//recebimento do id co contato a ser excluido (validadro.js)
+			String idcon = request.getParameter("idcon");
+			//setar as veriaveis JavaBeans
+			contato.setIdcon(idcon);
+			//executar e metodo deletar contato (DAO) passando o objeto contato
+			dao.deletarContato(contato);
 			//redirecionar para documento agenda.jsp (atualizando as alyteracoes)
 			response.sendRedirect("main");
 			

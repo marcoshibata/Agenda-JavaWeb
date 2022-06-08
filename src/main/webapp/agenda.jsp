@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="agenda">
 	<h1>Agenda de Contatos</h1>
 	<a href="novo.html" class="Botao1">Novo contato</a>
 	<table id="tabela">
@@ -34,9 +35,12 @@
 				<td><%=lista.get(i).getFone() %></td>
 				<td><%=lista.get(i).getEmail() %></td>
 				<td><a href="select?idcon=<%= lista.get(i).getIdcon()%>" class="Botao1">Editar</a>
-			</tr>
-		<%}%>
+					<a href="javascript: confirmar(<%= lista.get(i).getIdcon()%>)" class="Botao2">Excluir</a></td>
+				</tr>
+				<%}%>
 		</tbody>
 	</table>
+	<script src="scripts/confirmador.js"></script>
+	</div>
 </body>
 </html>

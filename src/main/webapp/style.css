@@ -28,6 +28,26 @@ div#novo{
 	border: 1px solid #66bbff;
 	border-radius:5px;
 }
+div#editar{
+	width:500px;
+	height:300px;
+	padding:10px;
+	background-color:#f0f0f0;
+	text-align:center;
+	margin:auto;
+	border: 1px solid #66bbff;
+	border-radius:5px;
+}
+
+div#agenda{
+    width:680px;
+	padding:5px;
+	background-color:#f0f0f0;
+	text-align:center;
+	margin:auto;
+	border: 1px solid #66bbff;
+	border-radius:5px;
+}
 
 h1{
 	color:#66bbff;
@@ -46,9 +66,23 @@ h1{
 
 }
 
+.Botao2{
+	text-decoration:none;
+	background-color:#d51213;
+	padding: 5px 10px 5px 10px;
+	color:#fff;
+	font-size:1.2em;
+	font-weight:700;
+	border-radius:5px;
+	border:0;
+	cursor:pointer;
+
+}
+
 .caixa1{
 	width: 320px;
 	padding: 5px;
+	margin-left:80px;
 	margin-bottom:10px;
 	border: 1px solid #66bbff;
 	border-radius:5px;
@@ -57,14 +91,19 @@ h1{
 }
 
 .caixa2{
+	width: 320px;
 	padding: 5px;
+	margin-left:80px;
 	margin-bottom:10px;
 	border: 1px solid #66bbff;
 	border-radius:5px;
 }
 
 #caixa3 {
+	
+	width: 50px;
 	padding: 5px;
+	margin-left:80px;
 	margin-bottom:10px;
 	border: 1px solid #ff0000;
 }
